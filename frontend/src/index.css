@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+  --font : "Poppins", sans-serif;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.nav ul{
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.nav h1 span{
+  color: dodgerblue;
+}
+
+.nav h1{
+  color: #212121;
+}
+
+.nav ul .active{
+  color: dodgerblue;
+}
+
+.nav ul li{
+  color: #212121;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.form form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.form form input{
+  font-size: 18px;
+  padding: 5px;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid dodgerblue;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form form input:focus{
+  box-shadow: 0px 0px 0px 4px rgba(30, 143, 255, 0.178);
+}
+
+.form form input::placeholder{
+  font-family: var(--font);
+  color: rgb(175, 175, 175);
+}
+
+
+.form form button{
+  color: white;
+  background-color: dodgerblue;
+  padding: 7px 30px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.form h4{
+  text-align: start;
+  margin-top: 10px;
+}
+
+.todo_list{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.todo_list h4{
+  width: 400px;
+  text-align: start;
+}
+
+.todo_list span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #e7e7e783;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.todo_list h4{
+  padding: 0px;
+  margin: 0px;
+  color: #212121;
+  font-weight: 400;
+}
+
+input[type="checkbox"] {
+  /* Base styles for the checkbox */
+   appearance: none;
+  background-color: #ffff;
+  margin: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]::before {
+  /* Pseudo-element to create the custom visual appearance */
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 15px;
+  height: 15px;
+  background-color: #ffff;
+  border: 1px solid #ddd;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  /* Styles for when the checkbox is checked */
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  transform: scale(1.1);
+}
